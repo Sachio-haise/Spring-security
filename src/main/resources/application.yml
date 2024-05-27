@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+spring:
+    profiles: 
+      active: dev
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: dev
+  application:
+    name: demo
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    
+  datasource:
+    url: jdbc:mysql://localhost:3306/test_2
+    username: root
+    password: 
+    driver-class-name: com.mysql.jdbc.Driver
